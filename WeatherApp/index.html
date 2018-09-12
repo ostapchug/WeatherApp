@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather App</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <h2>Weather forecast</h2>
+    <hr>
+
+<form class="form-inline">
+  <div class="form-group">
+  <label for="cityname">City name:</label>
+  <input type="text" id="cityname" class="form-control">
+  <input type="button" id="seachcity" class="btn btn-default" value="Search">
+  </div>
+</form>
+<h2 id="currentcity"></h2>
+<img id="weathericon">
+<table class="table-striped" width="20%">
+  <tr>
+    <td>Weather conditions:</td>
+    <td id="weather"></td> 
+  </tr>
+    <tr>
+    <td>Cloudiness, %:</td>
+    <td id="clouds"></td> 
+  </tr>
+  <tr>
+    <td>Temperature, °C:</td>
+    <td id="temperature"></td> 
+  </tr>
+  <tr>
+    <td>Pressure, mm Hg:</td>
+    <td id="pressure"></td> 
+  </tr>
+   <tr>
+    <td>Wind: speed, m/s:</td>
+    <td id="wind"></td> 
+  </tr>
+  <tr>
+    <td>Humidity, %:</td>
+    <td id="humidity"></td> 
+  </tr>
+</table>
+
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
