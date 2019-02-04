@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Weather App</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-  <div class="container-fluid">
-    <h2>Weather forecast</h2>
-    <hr>
-
-<form class="form-inline">
-  <div class="form-group">
-  <label for="cityname">City name:</label>
-  <input type="text" id="cityname" class="form-control">
-  <input type="button" id="seachcity" class="btn btn-default" value="Search">
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WeatherApp</a>
+    </div>
   </div>
-</form>
-<h2 id="currentcity"></h2>
-<img id="weathericon">
-<table class="table-striped" width="20%">
-  <tr>
-    <td>Weather conditions:</td>
-    <td id="weather"></td> 
-  </tr>
-    <tr>
-    <td>Cloudiness, %:</td>
-    <td id="clouds"></td> 
-  </tr>
-  <tr>
-    <td>Temperature, °C:</td>
-    <td id="temperature"></td> 
-  </tr>
-  <tr>
-    <td>Pressure, mm Hg:</td>
-    <td id="pressure"></td> 
-  </tr>
-   <tr>
-    <td>Wind: speed, m/s:</td>
-    <td id="wind"></td> 
-  </tr>
-  <tr>
-    <td>Humidity, %:</td>
-    <td id="humidity"></td> 
-  </tr>
-</table>
+</nav>
 
+<div class = "page-header">
+<div class="container">
+   <h2>Weather forecast</h2>
+</div>
 </div>
 
+<div class="jumbotron text-center">
+<form id="form" class="form-inline">
+  <div class="form-group">
+  <input type="text" id="cityname" class="form-control" placeholder="Your city name">
+  <input type="button" id="seachcity" class="btn btn-default" value="Search">
+  <input type="button" id="getlocation" class="btn btn-link" value=" &#9664; Current location">
+  </div>
+</form>
+</div>
+
+<div class="container">
+<div id="tips">
+    <h3>How it works:</h3>
+    <ul>
+    <li>Put the city's name and get the current weather and forecasts in your city. Example - <b>Kyiv</b>. </li>
+    <li> If nothing happens, make sure that your writing is correct.</li>
+    </ul>
+</div>
+
+<div id="tabs" style="display:none;">
+<h2>Current weather and forecasts in your city</h2>
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a data-toggle="tab" href="#current">Current</a></li>
+  <li><a data-toggle="tab" href="#daily">Daily</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="current" class="tab-pane fade in active">
+  <h2 id="currentcity"></h2>
+  <table id="ctable" class="table">
+  </table>
+  </div>
+
+  <div id="daily" class="tab-pane fade">
+  <h2 id="dailycity"></h2>
+    <table id="dtable" class="table">
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container text-center">
+  <p>&#169; 2019 WeatherApp &#174; All rights reserved.</p>
+</div>
+</footer>
 <script type="text/javascript" src="script.js"></script>
 
 </body>
