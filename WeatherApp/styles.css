@@ -4,7 +4,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom:100px;
 }
 .footer {
   position: absolute;
@@ -27,4 +27,10 @@ h2{
 }
 .nav-tabs > li > a{
 	color: #3CB371;
+}
+.navbar {
+  border-radius: 0px;
+}
+.page-header h2 {
+  margin-top:0px;
 }
